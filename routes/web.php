@@ -12,10 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('video_game\index');
+});*/
+
+/* pagina principal  */
+Route::get(
+    '/',
+    [\App\Http\Controllers\VideogamesController::class,'index']
+);
 
 Route::get(
     '/test-database',
